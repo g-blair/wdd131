@@ -41,12 +41,15 @@ img{
     width: 55%;
 }
 li{
-    text-align: center;
+    text-align: left;
+    margin-left: 20px;
 }
-.list{
-    list-style-type: none;
+ol p {
+    text-align: left;
+    color: black;
+    font-size: 1em;
+    margin-top: 0;
 }
-
 .background {
     background-color: #000000;
 }
