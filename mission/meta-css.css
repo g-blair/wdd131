@@ -2,6 +2,17 @@ body {
     background-color: white;
     font-size: 20px;
 }
+
+.mission-text {
+  color: black;
+  font-size: 1em;
+  text-align: left;
+}
+
+body.dark .mission-text {
+  color: white;
+}
+
 #content{
     max-width: 60%;
     border: 1px solid darkgrey;
@@ -10,7 +21,7 @@ body {
 }
 p {
     color: #035f9c;
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 hr {
     height: 3px;
@@ -25,7 +36,7 @@ h1, h2, p{
 #logos{
     text-align: center;
 }
-#byui-logo{
+#logo{
     width: 200px;
     height: 200px;
     margin: auto;
@@ -52,4 +63,11 @@ ol p {
 }
 .background {
     background-color: #000000;
+}
+.list-intro p {
+  color: black;
+}
+
+body.dark .list-intro p {
+  color: white;
 }
