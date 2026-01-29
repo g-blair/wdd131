@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="coolpics.css">
+    <script src="coolpics.js" defer></script>
 </head>
 <body>
 <header>
     <h1>Cool Pics 📷</h1>
-    <nav class="menu-btn">
-        <a href="#">Menu</a>
-    </nav>
-    <nav>
+    <button class="menu-btn">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </button>
+    <nav class="hide">
         <a href="#">Home</a>
         <a href="#">People</a>
         <a href="#">Places</a>
@@ -22,24 +25,29 @@
 </header>
 </body>
     <h2>Current Work</h2>
-    <div class="image-grid">
-        <div class="picture">
+    <section class="image-grid">
+        <figure>
             <img src="https://wddbyui.github.io/wdd131/images/norris-sm.jpg">
-        </div>
-        <div class="picture">
+        </figure>
+        <figure>
             <img src="https://wddbyui.github.io/wdd131/images/norris-sm.jpg">
-        </div>
-        <div class="picture">
+        </figure>
+        <figure>
             <img src="https://wddbyui.github.io/wdd131/images/norris-sm.jpg">
-        </div>
-        <div class="picture">
+        </figure>
+        <figure>
             <img src="https://wddbyui.github.io/wdd131/images/norris-sm.jpg">
-        </div>
-        <div class="picture">
+        </figure>
+        <figure>
             <img src="https://wddbyui.github.io/wdd131/images/norris-sm.jpg">
-        </div>
-        <div class="picture">
+        </figure>
+        <figure>
             <img src="https://wddbyui.github.io/wdd131/images/norris-sm.jpg">
-        </div>
-    </div>
+        </figure>
+    </section>
+    <dialog>
+        <img>
+        <button class="close-viewer">X</button>
+    </dialog>
+    <footer>Gavin Blair</footer>
 </html>
