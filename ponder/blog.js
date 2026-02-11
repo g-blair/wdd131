@@ -1,7 +1,5 @@
-
 const articles = [
 	{
-		id: 1,
 		title: 'Septimus Heap Book One: Magyk',
 		date: 'July 5, 2022',
 		description:
@@ -13,7 +11,6 @@ const articles = [
 		stars: '⭐⭐⭐⭐'
 	},
 	{
-		id: 2,
 		title: 'Magnus Chase Book One: Sword of Summer',
 		date: 'December 12, 2021',
 		description:
@@ -26,7 +23,6 @@ const articles = [
 		stars: '⭐⭐⭐⭐'
 	},
 	{
-		id: 3,
 		title: "Belgariad Book One: Pawn of Prophecy",
 		date: "Feb 12, 2022",
 		description:
@@ -39,4 +35,21 @@ const articles = [
 		stars: "⭐⭐⭐⭐⭐"
 	}
 ];
-                
+
+const bookList = document.getElementById('book-list');
+
+articles.forEach(books => {
+
+
+    let html = `<article class='book'>
+                <h2>${books.title}</h2>
+                <img src=${books.imgSrc} alt="${books.imgAlt}">
+                <p><strong>Release Date:</strong> ${books.date}</p>
+                <p><strong>Recommended Age:</strong> ${books.ages}</p>
+                <p><strong>Genre:</strong> ${books.genre}</p>
+                <p><strong>Rating:</strong> <span aria-label="${books.stars.length} out of 5 stars" role="img">${books.stars}</span></p>
+                <p id='desc'>${books.description}</p>
+            </article`
+    
+    bookList.innerHTML += html;
+});
