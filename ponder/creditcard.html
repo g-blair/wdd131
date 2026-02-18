@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Form</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="creditcard.css"/>
+    <script src="creditcard.js" defer></script>
+  </head>
+  <body>
+    <header><h1>Checkout</h1></header>
+    <main>
+      <section class="errors"></section>
+
+        
+        <div class="checkout">
+            <div class="card">
+                <div class="card-front">
+                    <p class="total">TOTAL: $199</p>
+                    <div class="chip"></div>
+
+                    <label>CARD NUMBER</label>
+                    <input type="text" value="1234 5678 9101 1020">
+
+                    <label>CARD HOLDER</label>
+                    <input type="text" value="John Doe">
+
+                    <div class="expiration">
+                        <label>EXPIRATION</label>
+                        <div>
+                            <input type="text" value="MM">
+                            <input type="text" value="YY">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-back">
+                    <div class="stripe"></div>
+                    <label>CVC/CVV</label>
+                    <input type="text" value="XXX">
+                </div>
+            </div>
+
+            <button type='button' class="submit">Submit</button>
+        </div>
+    </main>
+  </body>
+</html>
