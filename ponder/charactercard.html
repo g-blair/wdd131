@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Card</title>
+    <link rel="stylesheet" href="charactercard.css">
+    <script src="charactercard.js" defer></script>
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Character Card">
+    <meta property="og:description" content="Character Card">
+    <meta property="og:url" content="https://g-blair.github.io/wdd131/ponder/charactercard.html">
+    <meta property="og:image" content="https://andejuli.github.io/wdd131/character_card/snortleblat.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Character Card">
+    <meta name="twitter:description" content="Character Card">
+    <meta name="twitter:image" content="https://andejuli.github.io/wdd131/character_card/snortleblat.webp">
+
+    <link rel="icon" href="/favicon.ico">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+</head>
+<body>
+    <div class="card">
+    <img src="https://andejuli.github.io/wdd131/character_card/snortleblat.webp" alt="Character">
+
+    <div class="card-name">
+        Snortleblat
+    </div>
+
+    <div class="card-info">
+        <p><strong>Class:</strong> Swamp Beast Diplomat</p>
+        <p><strong>Level:</strong> <span id="level">7</span></p>
+        <p><strong>Health:</strong> <span id="health">40</span></p>
+    </div>
+
+    <div class="card-buttons">
+        <button onclick="attack()">Attack</button>
+        <button onclick="levelUp()">Level Up</button>
+    </div>
+</div>
+</body>
+</html>
