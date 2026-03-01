@@ -1,3 +1,4 @@
+let backgroundColor = "#8800FF";
 let blockSize = 25;
 let total_row = 17;
 let total_col = 17;
@@ -24,7 +25,18 @@ window.onload = function () {
     context = board.getContext("2d");
 
     placeFood();
-    document.addEventListener("keyup", changeDirection);
+    board.addEventListener("keyup", changeDirection);
+
+    document.getElementById("bgColor").addEventListener("change", function () {
+        backgroundColor = this.value;
+    });
+
+    board.focus();
+
+    board.addEventListener("click", function() {
+        board.focus();
+    });
+
     setInterval(update, 1000 / 10);
 }
 
@@ -33,7 +45,7 @@ function update() {
         return;
     }
 
-    context.fillStyle = "#8800FF";
+    context.fillStyle = backgroundColor;
     context.fillRect(0, 0, board.width, board.height);
 
     context.fillStyle = "yellow";
