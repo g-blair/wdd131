@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Recipe Book</title>
   <link rel="stylesheet" href="recipes.css" />
+  <script src="recipes.js" defer></script>
 </head>
 <body>
 
@@ -15,12 +16,12 @@
         </div>
 
         <div class="search-bar">
-            <input type="text" placeholder="Find a recipe">
+            <input type="text" id="search" placeholder="Find a recipe">
             <button>🔍</button>
         </div>
     </header>
 
-  <main>
+  <main id="recipe-container">
     <article class="recipe-card">
       <img src="images/apple-crisp.jpg" alt="Apple Crisp">
 
