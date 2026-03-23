@@ -37,8 +37,12 @@ function handleClick(cell, index) {
         return;
     }
 
-    currentPlayer = currentPlayer === "X" ? "O" : "X";
-    statusText.textContent = `Player ${currentPlayer}'s turn`;
+    currentPlayer = "O";
+    statusText.textContent = "AI is thinking...";
+
+    setTimeout(aiMove, 400);
+
+    if (cell.textContent !== "" || !gameActive || currentPlayer !== "X") return;
 }
 
 function checkWinner() {
@@ -53,5 +57,35 @@ function restartGame() {
     cells.forEach(cell => cell.textContent = "");
     currentPlayer = "X";
     gameActive = true;
+    statusText.textContent = "Player X's turn";
+}
+
+function aiMove() {
+    if (!gameActive) return;
+
+    let emptyCells = [];
+
+    cells.forEach((cell, index) => {
+        if (cell.textContent === "") {
+            emptyCells.push(index);
+        }
+    });
+
+    let randomIndex = emptyCells[Math.floor(Math.random() * emptyCells.length)];
+    cells[randomIndex].textContent = "O";
+
+    if (checkWinner()) {
+        statusText.textContent = "AI Wins!";
+        gameActive = false;
+        return;
+    }
+
+    if ([...cells].every(cell => cell.textContent !== "")) {
+        statusText.textContent = "Draw!";
+        gameActive = false;
+        return;
+    }
+
+    currentPlayer = "X";
     statusText.textContent = "Player X's turn";
 }

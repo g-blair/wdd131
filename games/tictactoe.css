@@ -25,3 +25,14 @@ body {
 .cell:hover {
     background: #ddd;
 }
+
+header {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+}
